@@ -220,7 +220,7 @@ body,html{
 }
 
 .social-icon-fill path, .social-icon-fill circle, .social-icon-fill rect {
-    fill: #fff;
+    fill: #000;
 }
 
 .page-overlay-btn {
