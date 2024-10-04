@@ -11,7 +11,18 @@
 <center> 
 	<body background="jokepage_Assets/bga.gif" style="color: aliceblue;">
         <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><u>SUPREMOLANDIA</u><br>
-		<h4 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">La mejor pagina para gaming.<br>
+		<h4 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">La mejor pagina para gaming.<br> 
+    <div id="twitch-embed"></div>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "xsupremolucic",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["embed.example.com", "othersite.example.com"]
+      });
+    </script>
 	        <audio controls>
                 <source src="horse.ogg" type="audio/ogg">
                 <source src="jokepage_Assets/la_casa_de_diego_millar.mp3" type="audio/mpeg">
