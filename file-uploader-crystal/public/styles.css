@@ -1,0 +1,228 @@
+@font-face {
+	font-family: "FG";
+	font-weight: 500;
+	src: url('framd.ttf');
+}
+
+@font-face {
+	font-family: "FG";
+	font-weight: 900;
+	src: url('frahv.ttf');
+}
+
+@font-face {
+	font-family: "XFG";
+	font-weight: 900;
+	src: url('frahvmod.ttf');
+}
+
+html {
+	font-family: "FG";
+	background-image: linear-gradient(to bottom,
+			rgba(11, 11, 11, 0.92),
+			rgba(11, 11, 11, 0.92)),
+		url(./bliss-small.avif);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+body {
+	/*     font-family: Arial, sans-serif; */
+	/*     background-color: #111; */
+	margin: 0;
+	padding: 20px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: aliceblue
+}
+
+h1 {
+	font-family: "FG";
+	font-weight: 200;
+	max-width: 100%;
+	overflow-wrap: break-word;
+}
+
+a {
+	text-decoration: none;
+}
+
+.bottom {
+	font-size: 0.9em;
+	/*    margin-top: 1ch;*/
+	flex: 1;
+	text-align: center;
+}
+
+.bottom>p {
+	margin: 10px 0px;
+}
+
+.percent {
+	color: aliceblue
+}
+
+.container {
+	max-width: 800px;
+	margin: auto;
+	/*     background: white; */
+	/*! padding: 20px; */
+	border-radius: 0px;
+	/*! box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+
+#drop-area {
+	/*! border: 2px solid #00ff00; */
+	/*! border-radius: 6px; */
+	/*! padding-left: 10px; */
+	/*! padding-right: 10px; */
+	text-align: center;
+	position: relative;
+	width: fit-content;
+	margin: 0 auto;
+	/* Center the element */
+	display: block;
+	/* Ensure it behaves as a block-level element */
+	background: rgba(202, 230, 190, .75);
+	border: 1px solid #b7d1a0;
+	border-radius: 4px;
+	color: #468847;
+	cursor: pointer;
+	/*! display: inline-block; */
+	font-size: 24px;
+	padding: 28px 48px;
+	text-shadow: 0 1px hsla(0, 0%, 100%, .5);
+	transition: background-color .25s, width .5s, height .5s;
+}
+
+.button {
+	display: inline-block;
+	padding: 10px 20px;
+	/*     background: #; */
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	/*     margin-top: 10px; */
+}
+
+.upload-status {
+	margin-top: 10px;
+}
+
+nav a,
+nav>ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#upload-status {
+	margin: 20px;
+	/* Adjust as needed */
+}
+
+.upload-status {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 2px solid #999;
+	/* Optional styling for the status box */
+	padding: 5px;
+	/* Optional padding */
+	/*! border-radius: 6px; */
+	/* Optional rounded corners */
+	/*! background-color: #f9f9f9; */
+	/* Optional background color */
+}
+
+.link-container {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	/* Pushes the link and button to the right */
+}
+
+.link {
+	color: #ffb6c1;
+	text-decoration: none;
+	/* Remove underline from link */
+	margin-right: 5px;
+	/* Space between link and button */
+}
+
+.link:hover {
+	text-decoration: underline;
+	/* Optional: underline on hover */
+}
+
+.copy-button {
+	display: inline;
+	background-color: #7a6fff;
+	/* Button background color */
+	color: white;
+	/* Button text color */
+	border: none;
+	/* Remove border */
+	border-radius: 3px;
+	/* Rounded corners for the button */
+	padding: 5px 10px;
+	/* Button padding */
+	cursor: pointer;
+	/* Pointer cursor on hover */
+	font-weight: bold;
+}
+
+.delete-button {
+	display: inline;
+	background-color: #ff6f6f;
+	/* Button background color */
+	color: white;
+	/* Button text color */
+	border: none;
+	/* Remove border */
+	border-radius: 3px;
+	/* Rounded corners for the button */
+	padding: 5px 10px;
+	/* Button padding */
+	cursor: pointer;
+	/* Pointer cursor on hover */
+	margin-left: 6px;
+	font-weight: bold;
+}
+
+
+.copy-button:hover {
+	background-color: #6057ce;
+	/* Darker shade on hover */
+}
+
+.delete-button:hover {
+	background-color: #ce5757;
+	/* Darker shade on hover */
+}
+
+.status {
+	color: rgb(255, 132, 0);
+}
+
+a:link {
+	color: #ffb6c1
+}
+
+a:visited {
+	color: #ffb6c1
+}
+
+a:hover {
+	color: #ffb6c1
+}
