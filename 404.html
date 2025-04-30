@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <HTML>
 <head>
-    <meta charset="utf-8"/>	 
+    <meta charset="utf-8"/>	
+    <meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, >
 	<title>XSupremoLucic</title>
         <link rel="icon" href="assets/images/favicon.png" type="image/webp">
 </head>
@@ -12,14 +13,29 @@
     bottom:0px;
     left:0%;
 }
+.selectDisable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.selectEnable { 
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+}
 </style>
 <img src="yourimagepath" class="fix"/>
 <body style="background-color:black;">
   <center>
-	<h1 style="color:#a30303;">xsupremolucic.com<h1><br>
-	<FONT FACE="impact" SIZE=20 COLOR="red">404 NOT FOUND</FONT><br>
-	<a href="/"><h2 style="color:#a30303;">Pagina Principal<h2></a><br>
-	<img src="assets/images/404.jpg" class="fix">
+	<h1 style="color:#a30303;" class="selectDisable">xsupremolucic.com<h1><br>
+	<FONT FACE="impact" SIZE=20 COLOR="red"class="selectDisable">404 NOT FOUND</FONT><br>
+	<a href="/"><h2 style="color:#a30303;"class="selectDisable">Pagina Principal<h2></a><br>
+	<img src="assets/images/404.jpg" class="selectDisable" class="fix">
   </center>
 </body>
 </html>	
