@@ -22,7 +22,7 @@ body,html{
 
 @font-face {
     font-family: 'Mario Kart DS';
-    src: url('../fonts/MarioKartDS.ttf') format('truetype');
+    src: url('fonts/MarioKartDS.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
