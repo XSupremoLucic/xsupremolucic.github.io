@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Rotating Cube</title>
+  <style>
+    :root { --s: 200px; --h: 100px; --g: rgba(255,255,0,.6); --g2: rgba(255,170,0,.4); }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { min-height: 100vh; background: #000; display: flex; justify-content: center; align-items: center; overflow: hidden; perspective: 1000px; }
+    #stars { position: fixed; inset: 0; pointer-events: none; }
+    .star { position: absolute; background: #fff; border-radius: 50%; animation: t var(--d,2s) infinite ease-in-out var(--dl,0s); }
+    @keyframes t { 0%,100%{opacity:.2;transform:scale(.8)} 50%{opacity:1;transform:scale(1.2)} }
+    .c { width: var(--s); height: var(--s); transform-style: preserve-3d; }
+    #cube { width: 100%; height: 100%; transform-style: preserve-3d; animation: r 10s infinite linear; cursor: pointer; }
+    @keyframes r { to{transform:rotateX(360deg)rotateY(360deg)} }
+    .f { position: absolute; width: var(--s); height: var(--s); background: rgba(0,0,0,.8); border: 2px solid rgba(255,255,255,.3); overflow: hidden; transition: .3s; }
+    .f img { width: 100%; height: 100%; object-fit: cover; }
+    .c:hover .f { border-color: var(--g); box-shadow: 0 0 15px var(--g), 0 0 30px var(--g2), inset 0 0 10px rgba(255,255,0,.2); }
+  </style>
+</head>
+<body>
+  <div id="stars"></div>
+  <div class="c"><div id="cube"></div></div>
+  <script>
+    const $ = id => document.getElementById(id), r = () => Math.random();
+    const G = 'https://www.xsupremolucic.com/assets/images/xsl.png';
+    
+    // Cube: [rotateAxis, angle] - null=front, Y=sides, X=top/bottom
+    [[0,0],[1,180],[1,90],[1,-90],[2,90],[2,-90]].forEach(([a,d]) => {
+      const f = document.createElement('div');
+      f.className = 'f';
+      f.style.transform = (a ? `rotate${'_YX'[a]}(${d}deg)` : '') + 'translateZ(var(--h))';
+      f.innerHTML = `<img src="${G}">`;
+      $('cube').appendChild(f);
+    });
+    $('cube').onclick = () => location = 'https://www.youtube.com/watch?v=UnktCDi-BVs';
+    
+    // Stars: random position, size, duration, delay
+    for (let i = 150; i--;) {
+      const s = document.createElement('div'), z = r() * 3 + 1;
+      s.className = 'star';
+      s.style.cssText = `left:${r()*100}%;top:${r()*100}%;width:${z}px;height:${z}px;--d:${r()*3+1}s;--dl:${r()*5}s`;
+      $('stars').appendChild(s);
+    }
+  </script>
+</body>
+</html>
